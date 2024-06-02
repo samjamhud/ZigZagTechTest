@@ -1,0 +1,60 @@
+.details {
+  img {
+    max-width: 100%;
+  }
+
+  &__icon {
+    font-size: initial;
+    margin-right: 0.5rem;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: #fc5756;
+    }
+  }
+
+  &__title {
+    margin-top: 40px;
+  }
+
+  &__pill {
+    display: inline;
+    font-size: initial;
+    font-weight: initial;
+    background: #fc5756;
+    color: #ffffff;
+    margin-right: 1rem;
+    padding: 0.25rem 1.5rem;
+    border-radius: 0.25rem;
+
+    &:first-of-type {
+      margin-left: 1rem;
+    }
+  }
+
+  &__breed-button {
+    margin: 4px 0;
+    width: 100%;
+  }
+
+  &__info {
+    background-color: rgba(252, 87, 86, 0.5);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0.25rem 0.5rem 0.5rem #dddddd;
+
+    &.details__image {
+      background-image: url('../../assets/paw-prints.png');
+      background-repeat: no-repeat;
+      background-blend-mode: screen;
+      background-size: contain;
+
+      &.details__image__right {
+        background-position: 100% 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@keyframes icon__rotate {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+header {
+  box-shadow: 0 0 10px #fc5756;
+}
+
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    padding: 20px 0;
+  }
+
+  &__logo {
+    height: 60px;
+  }
+
+  &__loading {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+
+    ng-icon {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      overflow: visible;
+      font-size: 10rem;
+      transform: translate(-50%, -50%);
+
+      &.icon__rotate {
+        -webkit-animation: icon__rotate 2s linear infinite;
+        -moz-animation: icon__rotate 2s linear infinite;
+        -ms-animation: icon__rotate 2s linear infinite;
+        -o-animation: icon__rotate 2s linear infinite;
+        animation: icon__rotate 2s linear infinite;
+      }
+    }
+  }
+}
+
+::ng-deep {
+  ng-icon svg {
+    vertical-align: top;
+  }
+}

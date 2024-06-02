@@ -1,0 +1,46 @@
+<div class="container-md details">
+  <div class="row">
+    <div class="col-12">
+      <h4 class="details__title">
+        <ng-icon
+          tabindex="0"
+          class="details__icon"
+          name="bootstrapArrow90degLeft"
+          (click)="navigateBack()"
+          (keydown.enter)="navigateBack()"
+        ></ng-icon>
+
+        {{ breedDetails?.name }}
+
+        @for (temperament of breedDetails?.temperament; track temperament) {
+        <div class="details__pill">{{ temperament }}</div>
+        }
+      </h4>
+      <p>{{ breedDetails?.description }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <img [src]="breedDetails?.image" />
+    </div>
+    <div class="col-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="details__info details__image">
+        <strong>Life Expectancy:</strong> {{ breedDetails?.lifeExpectancy }}
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="details__info">
+        <strong>Size:</strong> {{ breedDetails?.size }}
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="details__info details__image details__image__right">
+        <strong>Origin:</strong> {{ breedDetails?.origin }}
+      </div>
+    </div>
+  </div>
+</div>
